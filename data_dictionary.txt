@@ -1,0 +1,83 @@
+/////////////////////
+// Data Dictionary //
+/////////////////////
+
+-------
+Airport
+-------
+- id :Unique identifier (PK)
+- type: Airport type
+- name: Airport name
+- iso_country: ISO Code of the airport's country
+- iso_region: ISO Code for the airport's region
+- municipality: City/Municipality where the airport is located
+- gps_code: Airport GPS Code
+- coordinates: Airport coordinates
+- elevation_ft: Airport altitude
+
+-------
+admission_port
+-------
+- admission_port_code: 3 digit code for immigrant country of residence (PK)
+- country: Name of country
+
+-----------
+Temperature
+-----------
+- temperature_id: Unique Identifier (PK)
+- average_temperature: Average temperature in celsius
+- average_temperature_uncertainty: 95% confide nce interval around average temperature
+- year: year
+- country: Name of country
+- month: month
+
+-------
+applicant_nationality
+-------
+- birth_country:code of country (PK)
+- country:digit country:digit 
+
+-----
+demographics
+-----
+- state_code: Code of the state (PK)
+- state: US State
+- median_age: The median population age
+- male_population: Male population total
+- female_population: Female population total
+- total_population: Total population
+-number_of_veterans: number of veterans:
+- foreign_born: Number of residents who were not born in the state
+- average_household_size: Average size of houses in the state
+
+----
+Visa
+----
+- visa_id: Unique identifier (PK)
+- visa_category_code :Visa codes collapsed into three categories
+- visatype: Class of admission legally admitting the non-immigrant to temporarily stay in U.S.
+- visapost: Department of State where where Visa was issued
+
+-----------
+Immigration
+-----------
+- record_id: Unique identifier (PK)
+- year: year
+- birth_country: 3 digit code for immigrant country of birth
+- residence_country: 3 digit code for immigrant country of residence
+- applicant_age: age of miggrant
+- applicant_birth_year: birth year of miggrant
+- gender: gender of miggrant
+- admission_port_code: Port of admission
+- arrival_state_code: USA State of arrival
+- arrival_date: Arrival Date in the USA (FK)
+- departure_date: Departure Date from the USA
+- arrival_mode: Mode of transportation (1 = Air; 2 = Sea; 3 = Land; 9 = Not reported)
+- limit_date: date
+- visa_id: Unique identifier (FK)
+- month: month
+- temperature_id: Unique identifier (FK)
+- flight_number: Flight number of Airline used to arrive in U.S.
+- airline: Airline used to arrive in U.S.
+
+
